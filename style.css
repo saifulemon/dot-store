@@ -605,6 +605,54 @@ form.search button:hover {
   margin: 0 0.5em 0.5em 0;
 }
 
+
+/* for slider section */
+.slider .item {
+  position: relative;
+  height: 474px;
+}
+
+.slider .txt-content {
+  position: relative;
+  height: var(--percent100);
+  justify-content: flex-end;
+  padding: 0 0 10% 10%;
+  z-index: 1;
+}
+
+.slider h4 {
+  font-size: var(--font-small);
+  font-weight: var(--fw7);
+  width: fit-content;
+  padding: 4px 10px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border-radius: 4px;
+}
+
+.txt-content :where(h2, h3) span:first-child {
+  font-weight: var(--fw3);
+  columns: var(--light-text-color);
+  text-shadow: 10px 10px 25px rgb(141, 132, 144),
+  -10px 10px 25px rgb(199, 204, 243),
+  -10px -10px 25px rgb(155, 145, 111),
+  10px -10px 25px rgb(189, 203, 234);
+}
+
+.txt-content :where(h2, h3) span:last-child {
+  columns: var(--secondary-dark-color);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  text-shadow: 10px 10px 25px rgb(255, 255, 255),
+  -10px 10px 25px rgb(236, 238, 249),
+  -10px -10px 25px rgb(255, 249, 229),
+  10px -10px 25px rgb(255, 255, 255);
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--secondary-dark-color);
+}
+
 /* mobile responsive */
 @media screen and (min-width: 992px) {
   .container {
@@ -754,11 +802,6 @@ form.search button:hover {
     background-size: auto;
   }
 
-  /* showing the first sub menu */
-  .dpt-menu .has-child:nth-child(1) > ul {
-    display: block;
-  }
-
   .dpt-menu .beauty ul {
     background-image: url(assets/menu/menu_bg1.jpg);
   }
@@ -797,5 +840,11 @@ form.search button:hover {
 
   .dpt-menu .has-child:hover .mega {
     display: flex;
+  }
+
+  /* swiper slider */
+  .slider > div > .wrapper {
+    width: calc(100% -  (300px + 2em));
+    margin-left: auto;
   }
 }
