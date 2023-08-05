@@ -15,5 +15,25 @@ function copuMenu() {
     let topPlace = document.querySelector('.off-canvas .thetop-nav');
     topPlace.innerHTML = topNav.innerHTML;
 }
-
 copuMenu();
+// show mobile menu
+const menuBtn = document.querySelector('.trigger'),
+    closetBtn = document.querySelector('.t-close'),
+    addClass = document.querySelector('.site');
+menuBtn.addEventListener('click', function() {
+    addClass.classList.toggle('showmenu')
+});
+closetBtn.addEventListener('click', function() {
+    addClass.classList.remove('showmenu')
+})     
+
+// show sub menu on mobile
+const subMenu = document.querySelectorAll('.has-child .icon-small');
+subMenu.forEach((menu) => menu.addEventListener('click', toggle));
+
+function toggle(e) {
+    e.preventDefault();
+    subMenu.forEach((item) => item != this ? item.closest('.has-child').classList.remove('expand') : null);
+    if(this.closest('.has-child').classList != 'expand');
+    this.closest('.has-child').classList.toggle('expand');
+}

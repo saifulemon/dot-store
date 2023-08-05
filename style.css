@@ -476,11 +476,17 @@ form.search button:hover {
 /* for aside section  */
 .site-off {
   position: fixed;
+  left: -100%;
   width: 320px;
   height: var(--percent100);
   background-color: var(--white-color);
   overflow-y: auto;
   z-index: 1000;
+  transition:  all 0.4s linear;
+}
+
+.showmenu .site-off {
+  left: 0px;
 }
 
 .off-canvas {
@@ -516,6 +522,9 @@ form.search button:hover {
   background-color: var(--secondary-dark-color);
   color: var(--white-color);
   transition: var(--trans-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .t-close:hover {
@@ -543,6 +552,10 @@ form.search button:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.off-canvas .expand > :where(ul, .mega) {
+  max-height: 2000px;
 }
 
 .off-canvas .thetop-nav ul, .off-canvas nav > ul {
