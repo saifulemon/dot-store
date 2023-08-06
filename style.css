@@ -670,6 +670,58 @@ form.search button:hover {
   opacity: 1;
 }
 
+
+/* for trending Products section */
+.sectop {
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sectop h2 {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: var(--fw7);
+}
+
+.sectop h2 span:not(.circle) {
+  padding: 0 0 0 1.3em;
+}
+
+.products .offer {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.products .offer p {
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.products .offer ul {
+  gap: 1em;
+}
+
+.products .offer ul li {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  padding: .5em;
+  line-height: initial;
+  color: var(--secondary-dark-color);
+  background-color: var(--light-bg-color);
+  border-radius: 5px;
+}
+
+.products .offer ul li:not(:last-child)::before {
+  content: ":";
+  position: absolute;
+  right: -0.6em;
+  color: var(--light-text-color);
+}
+
+
 /* mobile responsive */
 @media screen and (min-width: 992px) {
   .container {
@@ -863,5 +915,15 @@ form.search button:hover {
   .slider > div > .wrapper {
     width: calc(100% -  (300px + 2em));
     margin-left: auto;
+  }
+
+
+  /* trending products */
+  .trending .products {
+    flex: 0 0 33.33%;
+  }
+
+  .products .big .media {
+    max-height: 373px;
   }
 }
